@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Inria Serif Regular';
+    src: url('../css/InriaSerif-Regular.ttf') ;
+    src: url('../css/InriaSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('../css/Lato-Light.ttf') ;
+    src: url('../css/Lato-Light.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'Inria Serif Regular';
+    /* font-weight: 100; */
+    font-size: 15vh;
+    color: black;
+}
+
+p {
+    font-family: 'Lato Light';
+    /* font-size: 2.5vh; */
+    color: grey;
+}
+
+a {
+    transition: all 0.5s ease;
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: #f5e4e4;
+    color: black;
+}
+
+body {
+    background-color:#fbf7f5;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+#name {
+    transition: all 1s ease;
+    margin: auto;
+}
+
+#name:hover{
+    /* transform: rotate(-45deg); */
+    letter-spacing: 1vw;
+    transition: all 1s ease;
+}
+
+#blurb {
+    margin: auto;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 1%;
+    width: 100vw;
+    text-align: right;
+}
+
+.nav-bar a {
+    font-family: 'Lato Light';
+    text-decoration: none;
+    color: grey;
+    padding: 1%;
+}
+
+.nav-bar a:hover {
+    text-decoration: overline;
+    text-decoration-color: black;
+    color: black;
+}
+
+.nav-bar a.active {
+    text-decoration: overline;
+    text-decoration-color: black;
+}
+
+.contact {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    text-align: center;
+}
+
+ion-icon {
+    transition: all 0.5s ease;
+    color: grey;
+    padding: 1%;
+}
+
+ion-icon:hover {
+    background-color:#f5e4e4;
+    color:black;
+}
+
+#note {
+    font-family: 'Lato Light';
+    font-size: 1.5vh;
+    color: grey;
+    font-style: italic;
+}
