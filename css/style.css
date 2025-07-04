@@ -1,110 +1,134 @@
 @font-face {
-    font-family: 'Inria Serif Regular';
-    src: url('../css/InriaSerif-Regular.ttf') ;
-    src: url('../css/InriaSerif-Regular.ttf') format('truetype');
+    font-family: 'Inter';
+    src: url('InterVariable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@font-face {
-    font-family: 'Lato Light';
-    src: url('../css/Lato-Light.ttf') ;
-    src: url('../css/Lato-Light.ttf') format('truetype');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-    font-family: 'Inria Serif Regular';
-    /* font-weight: 100; */
-    font-size: 15vh;
-    color: black;
+body, html {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 
-p {
-    font-family: 'Lato Light';
-    /* font-size: 2.5vh; */
-    color: grey;
+.profile-image {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: 0; /* sits behind text */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.profile-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5vw;
+  z-index: 1;
+  overflow: hidden;
+}
+
+h1, h2 {
+  font-size: 7.5vw;
+  margin: 0;
+}
+
+h1 span.ch{
+    display: none;
+}
+
+h1:hover span.en {
+    display: none;
+}
+
+h1:hover span.ch {
+    display: inline;
+}
+
+h2.small {
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+h2 span.ch{
+    display: none;
+}
+
+h2:hover span.en {
+    display: none;
+}
+
+h2:hover span.ch {
+    display: inline;
+}
+
+p.description {
+  font-size: 0.75rem;
+  margin-top: 2rem;
+  max-width: 400px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
 }
 
 a {
-    transition: all 0.5s ease;
-    color: black;
-    text-decoration: underline;
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
 }
 
 a:hover {
-    background-color: #f5e4e4;
-    color: black;
+  color: black;
+  background-color: white;
 }
 
-body {
-    background-color:#fbf7f5;
+.contact-links {
+  margin-top: 2rem;
 }
 
-.main {
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
+.contact-links a {
+  display: inline-block;
+  color: white;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
 }
 
-#name {
-    transition: all 1s ease;
-    margin: auto;
+.contact-links a:hover {
+  color: #d26738;
+  background-color: transparent;
 }
 
-#name:hover{
-    /* transform: rotate(-45deg); */
-    letter-spacing: 1vw;
-    transition: all 1s ease;
-}
-
-#blurb {
-    margin: auto;
-}
-
-.nav-bar {
-    position: fixed;
-    top: 1%;
-    width: 100vw;
-    text-align: right;
-}
-
-.nav-bar a {
-    font-family: 'Lato Light';
-    text-decoration: none;
-    color: grey;
-    padding: 1%;
-}
-
-.nav-bar a:hover {
-    text-decoration: overline;
-    text-decoration-color: black;
-    color: black;
-}
-
-.nav-bar a.active {
-    text-decoration: overline;
-    text-decoration-color: black;
-}
-
-.contact {
-    position: fixed;
-    width: 100vw;
-    bottom: 0;
-    text-align: center;
-}
-
-ion-icon {
-    transition: all 0.5s ease;
-    color: grey;
-    padding: 1%;
-}
-
-ion-icon:hover {
-    background-color:#f5e4e4;
-    color:black;
-}
-
-#note {
-    font-family: 'Lato Light';
-    font-size: 1.5vh;
-    color: grey;
-    font-style: italic;
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 5vw;
+  font-size: 0.7rem;
+  color: #ccc;
+  z-index: 2;
 }
